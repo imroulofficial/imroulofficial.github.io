@@ -5,12 +5,104 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Red Pen Studio</title>
-    <meta name="description" content="Red Pen Studio, maker of the mobile game My Teacher Life." />
-    <meta http-equiv="refresh" content="0; url=https://imroulofficial.github.io/my-teacher-life/" />
-    <link rel="canonical" href="https://imroulofficial.github.io/my-teacher-life/" />
+    <meta name="description" content="Red Pen Studio crafts fun, offline games from Bangladesh. Makers of My Teacher Life." />
+    <meta name="theme-color" content="#FF6B35" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖍️</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { display: ['Fredoka', 'system-ui', 'sans-serif'], sans: ['Nunito', 'system-ui', 'sans-serif'] },
+            colors: { brand: { orange: '#FF6B35', amber: '#FF9F1C', yellow: '#FFD23F', deep: '#c2410c', ink: '#7c2d12' } },
+          },
+        },
+      };
+    </script>
+    <style>
+      .dots { background-image: radial-gradient(rgba(255, 255, 255, 0.18) 2px, transparent 2.5px); background-size: 28px 28px; }
+      .title-3d { text-shadow: 0 5px 0 #c2410c, 0 12px 24px rgba(124, 45, 18, 0.3); }
+      .btn-3d { box-shadow: 0 6px 0 #c2410c; transition: transform 0.12s ease, box-shadow 0.12s ease; }
+      .game-card:hover .btn-3d { transform: translateY(-2px); box-shadow: 0 8px 0 #c2410c; }
+      .game-card:active .btn-3d { transform: translateY(4px); box-shadow: 0 2px 0 #c2410c; }
+      .game-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+      .game-card:hover { transform: translateY(-4px); }
+      @media (prefers-reduced-motion: reduce) {
+        .game-card, .btn-3d { transition: none; }
+        .game-card:hover, .game-card:hover .btn-3d { transform: none; }
+      }
+    </style>
   </head>
-  <body style="font-family: system-ui, sans-serif; text-align: center; padding: 3rem 1rem">
-    <h1>Red Pen Studio</h1>
-    <p>Taking you to <a href="https://imroulofficial.github.io/my-teacher-life/">My Teacher Life</a>…</p>
+  <body class="min-h-screen bg-amber-50 font-sans text-slate-800 antialiased">
+    <!-- Hero -->
+    <header class="relative overflow-hidden bg-gradient-to-br from-brand-orange via-brand-amber to-brand-yellow text-white">
+      <div class="dots absolute inset-0" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-5xl px-4 pb-24 pt-16 text-center sm:pb-32 sm:pt-24">
+        <div class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-3xl bg-white/90 text-5xl shadow-lg sm:h-24 sm:w-24 sm:text-6xl" aria-hidden="true">🖍️</div>
+        <h1 class="title-3d font-display text-5xl font-bold leading-none tracking-tight sm:text-7xl">Red Pen Studio</h1>
+        <p class="mx-auto mt-6 max-w-xl text-lg font-semibold text-brand-ink sm:text-2xl">Crafting fun, offline games from Bangladesh.</p>
+      </div>
+      <!-- wave -->
+      <svg class="absolute bottom-0 left-0 block h-12 w-full sm:h-16" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 40 C 240 90 480 0 720 30 S 1200 80 1440 30 V80 H0 Z" fill="#fffbeb" />
+      </svg>
+    </header>
+
+    <!-- Games -->
+    <main class="mx-auto max-w-5xl px-4 pb-16">
+      <section aria-labelledby="games-heading" class="pt-4 sm:pt-6">
+        <h2 id="games-heading" class="mb-6 text-center font-display text-3xl font-bold text-brand-deep sm:text-4xl">Our Games</h2>
+
+        <a
+          href="https://imroulofficial.github.io/my-teacher-life/"
+          class="game-card group block overflow-hidden rounded-[2rem] bg-white shadow-xl ring-1 ring-orange-100 hover:shadow-2xl focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-amber"
+        >
+          <div class="flex flex-col items-center gap-6 p-6 text-center sm:flex-row sm:items-center sm:gap-10 sm:p-10 sm:text-left">
+            <img
+              src="https://imroulofficial.github.io/my-teacher-life/store-assets/app-icon-512.png"
+              alt="My Teacher Life app icon"
+              width="512"
+              height="512"
+              class="h-32 w-32 flex-shrink-0 rounded-[1.75rem] shadow-lg ring-4 ring-amber-100 sm:h-44 sm:w-44 sm:rounded-[2.25rem]"
+            />
+            <div class="min-w-0 flex-1">
+              <h3 class="font-display text-3xl font-bold text-slate-900 sm:text-4xl">My Teacher Life</h3>
+              <div class="mt-3 flex flex-wrap justify-center gap-2 sm:justify-start">
+                <span class="rounded-full bg-orange-100 px-3 py-1 text-sm font-bold text-brand-deep">120 Levels</span>
+                <span class="rounded-full bg-amber-100 px-3 py-1 text-sm font-bold text-amber-800">10 Mini-Games</span>
+                <span class="rounded-full bg-green-100 px-3 py-1 text-sm font-bold text-green-800">🇧🇩 বাংলা</span>
+                <span class="rounded-full bg-sky-100 px-3 py-1 text-sm font-bold text-sky-800">Offline</span>
+              </div>
+              <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
+                The ultimate offline classroom simulation. 120 levels, 10 mini-games, and full Bangla support.
+              </p>
+              <span class="btn-3d mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-orange to-brand-amber px-8 py-4 font-display text-xl font-bold text-white">
+                ▶ Play Now
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <p class="mt-8 text-center text-slate-500">More games are on the way ✏️</p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-orange-100 bg-white">
+      <div class="mx-auto flex max-w-5xl flex-col items-center gap-4 px-4 py-10 text-center text-sm text-slate-600">
+        <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 font-semibold">
+          <a href="https://imroulofficial.github.io/my-teacher-life/privacy-policy.html" class="text-brand-deep underline-offset-4 hover:underline">Privacy Policy</a>
+          <a href="https://imroulofficial.github.io/my-teacher-life/terms.html" class="text-brand-deep underline-offset-4 hover:underline">Terms of Service</a>
+        </nav>
+        <p>
+          Contact:
+          <a href="mailto:mdimroulhassanofficial@gmail.com" class="break-all font-semibold text-brand-deep underline-offset-4 hover:underline">mdimroulhassanofficial@gmail.com</a>
+        </p>
+        <p class="text-slate-500">&copy; 2026 Red Pen Studio. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
