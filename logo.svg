@@ -1,15 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Red Pen Studio logo">
   <title>Red Pen Studio</title>
-  <!-- Pen collar -->
-  <rect x="38" y="6" width="52" height="16" rx="6" fill="#1D3557"/>
-  <rect x="44" y="22" width="40" height="6" fill="#1D3557"/>
-  <!-- Nib body -->
-  <path d="M64 124 L29 72 C22 61 23 46 32 37 L42 28 H86 L96 37 C105 46 106 61 99 72 Z" fill="#E63946"/>
-  <!-- Right-side shade -->
-  <path d="M64 124 L99 72 C106 61 105 46 96 37 L86 28 H64 Z" fill="#C1121F" opacity="0.35"/>
-  <!-- Play button -->
-  <path d="M53 41 Q53 37 56.5 39 L80 52.5 Q83.5 55 80 57.5 L56.5 71 Q53 73 53 69 Z" fill="#F4A261"/>
-  <!-- Breather hole and slit -->
-  <circle cx="64" cy="85" r="5" fill="#1D3557"/>
-  <path d="M64 90 V120" stroke="#1D3557" stroke-width="4" stroke-linecap="round"/>
+  <defs>
+    <!-- Slit and breather hole are cut out, so the background shows through -->
+    <mask id="rps-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="128" height="128">
+      <rect width="128" height="128" fill="#fff"/>
+      <path d="M62.25 14 H65.75 V54 H62.25 Z" fill="#000"/>
+      <circle cx="64" cy="60" r="7" fill="#000"/>
+    </mask>
+  </defs>
+  <!-- Nib, pointing up like an arrow: light left facet, dark right facet -->
+  <g mask="url(#rps-cut)">
+    <path d="M64 6 L28 60 L46 96 L64 84 Z" fill="#E63946"/>
+    <path d="M64 6 L100 60 L82 96 L64 84 Z" fill="#B3202E"/>
+  </g>
+  <!-- Text-cursor underscore -->
+  <rect x="34" y="106" width="60" height="12" rx="2" fill="#1D3557"/>
 </svg>
